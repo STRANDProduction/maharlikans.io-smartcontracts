@@ -1,0 +1,155 @@
+{
+  "contractName": "STRANDVoting",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/STRANDProduction/STRANDVoting.sol\":\"STRANDVoting\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/STRANDProduction/STRANDBallot.sol\":{\"keccak256\":\"0x7e4ef7923faa6a10b1f1927156a893eb8257e2aa24cae44e8181d76b5432cee6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ff7fafd938e90857dc8815d1d1ded08e362c31b1dafa042851f61e03a5fa8cc0\",\"dweb:/ipfs/QmcjCiQf3FFLE3R6HYt4bwaiDCaRJ5n2Xy5cbiRJAzwe88\"]},\"project:/contracts/STRANDProduction/STRANDVoting.sol\":{\"keccak256\":\"0x2afe7e16a12095a633f427585a7040c5d84ee94917788b2a1c25280f72c379a4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cb3169d333b17bd908783e39834e7b3201b9e1a50256c3021db6f55c142f2b6d\",\"dweb:/ipfs/QmQmD8qgbZrPYNmx6BkGqg3XPzEx3vh98T8L7VJVVhChS6\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220c96217dda2c68f6ad063f891cad56e28a8fe73710ee0b8dfbf651605f8d682fa64736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220c96217dda2c68f6ad063f891cad56e28a8fe73710ee0b8dfbf651605f8d682fa64736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "100:83:11:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "100:83:11:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.8.0 <0.9.0;\r\n\r\nimport \"./STRANDBallot.sol\";\r\n\r\ncontract STRANDVoting {\r\n    mapping(uint256 => STRANDBallot) internal _ballots;\r\n}",
+  "sourcePath": "d:\\BlockchainDev\\Source\\SolidityContracts\\contracts\\STRANDProduction\\STRANDVoting.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/STRANDProduction/STRANDVoting.sol",
+    "exportedSymbols": {
+      "STRANDBallot": [
+        1258
+      ],
+      "STRANDVoting": [
+        1581
+      ]
+    },
+    "id": 1582,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1574,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:11"
+      },
+      {
+        "absolutePath": "project:/contracts/STRANDProduction/STRANDBallot.sol",
+        "file": "./STRANDBallot.sol",
+        "id": 1575,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1582,
+        "sourceUnit": 1259,
+        "src": "68:28:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "STRANDVoting",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1581,
+        "linearizedBaseContracts": [
+          1581
+        ],
+        "name": "STRANDVoting",
+        "nameLocation": "109:12:11",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1580,
+            "mutability": "mutable",
+            "name": "_ballots",
+            "nameLocation": "171:8:11",
+            "nodeType": "VariableDeclaration",
+            "scope": 1581,
+            "src": "129:50:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_contract$_STRANDBallot_$1258_$",
+              "typeString": "mapping(uint256 => contract STRANDBallot)"
+            },
+            "typeName": {
+              "id": 1579,
+              "keyType": {
+                "id": 1576,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "137:7:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "129:32:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_contract$_STRANDBallot_$1258_$",
+                "typeString": "mapping(uint256 => contract STRANDBallot)"
+              },
+              "valueType": {
+                "id": 1578,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 1577,
+                  "name": "STRANDBallot",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1258,
+                  "src": "148:12:11"
+                },
+                "referencedDeclaration": 1258,
+                "src": "148:12:11",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_STRANDBallot_$1258",
+                  "typeString": "contract STRANDBallot"
+                }
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1582,
+        "src": "100:83:11",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:150:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xe947939FD21d5FE596e7563065F5DAE6F7058545",
+      "transactionHash": "0xe20a669f56fad890adce1a50302e38cc2b33bc5722216086b22e13e7648b0482"
+    }
+  },
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-09T21:40:33.767Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
