@@ -256,15 +256,15 @@
     "absolutePath": "project:/contracts/STRANDProduction/STRANDCore.sol",
     "exportedSymbols": {
       "STRANDCore": [
-        1049
+        1069
       ]
     },
-    "id": 1050,
+    "id": 1070,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1039,
+        "id": 1059,
         "literals": [
           "solidity",
           ">=",
@@ -284,9 +284,9 @@
         "contractDependencies": [],
         "contractKind": "library",
         "fullyImplemented": true,
-        "id": 1049,
+        "id": 1069,
         "linearizedBaseContracts": [
-          1049
+          1069
         ],
         "name": "STRANDCore",
         "nameLocation": "76:10:8",
@@ -294,14 +294,14 @@
         "nodes": [
           {
             "body": {
-              "id": 1047,
+              "id": 1067,
               "nodeType": "Block",
               "src": "152:41:8",
               "statements": [
                 {
                   "expression": {
                     "expression": {
-                      "id": 1044,
+                      "id": 1064,
                       "name": "block",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -312,7 +312,7 @@
                         "typeString": "block"
                       }
                     },
-                    "id": 1045,
+                    "id": 1065,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -325,15 +325,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1043,
-                  "id": 1046,
+                  "functionReturnParameters": 1063,
+                  "id": 1066,
                   "nodeType": "Return",
                   "src": "163:22:8"
                 }
               ]
             },
             "functionSelector": "6c9230db",
-            "id": 1048,
+            "id": 1068,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -341,23 +341,23 @@
             "nameLocation": "103:19:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1040,
+              "id": 1060,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "122:2:8"
             },
             "returnParameters": {
-              "id": 1043,
+              "id": 1063,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1042,
+                  "id": 1062,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1048,
+                  "scope": 1068,
                   "src": "146:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -366,7 +366,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1041,
+                    "id": 1061,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "146:4:8",
@@ -380,14 +380,14 @@
               ],
               "src": "145:6:8"
             },
-            "scope": 1049,
+            "scope": 1069,
             "src": "94:99:8",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 1050,
+        "scope": 1070,
         "src": "68:128:8",
         "usedErrors": []
       }
@@ -400,7 +400,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-10T09:45:46.314Z",
+  "updatedAt": "2022-05-11T04:57:48.958Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

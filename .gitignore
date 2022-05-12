@@ -351,3 +351,4 @@ MigrationBackup/
 
 # Solidity/OpenZeppelin
 @openzeppelin/
+node_modules/

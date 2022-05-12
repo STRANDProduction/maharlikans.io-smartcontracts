@@ -2638,7 +2638,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_struct$_Poll_$1475_memory_ptr_to_t_struct$_Poll_$1475_memory_ptr_fromStack",
+            "name": "abi_encode_t_struct$_Poll_$1503_memory_ptr_to_t_struct$_Poll_$1503_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2779,7 +2779,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_struct$_Poll_$1475_memory_ptr_to_t_struct$_Poll_$1475_memory_ptr_fromStack",
+                      "name": "abi_encode_t_struct$_Poll_$1503_memory_ptr_to_t_struct$_Poll_$1503_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "4793:87:14"
                     },
@@ -2796,7 +2796,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_struct$_Poll_$1475_memory_ptr__to_t_struct$_Poll_$1475_memory_ptr__fromStack_reversed",
+            "name": "abi_encode_tuple_t_struct$_Poll_$1503_memory_ptr__to_t_struct$_Poll_$1503_memory_ptr__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -6430,7 +6430,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint32(value) -> cleaned {\n        cleaned := and(value, 0xffffffff)\n    }\n\n    function validator_revert_t_uint32(value) {\n        if iszero(eq(value, cleanup_t_uint32(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint32(value)\n    }\n\n    function abi_decode_tuple_t_uint32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint32_to_t_uint32(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    // struct STRANDPolls.Poll -> struct STRANDPolls.Poll\n    function abi_encode_t_struct$_Poll_$1475_memory_ptr_to_t_struct$_Poll_$1475_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0x0100)\n\n        {\n            // pollNumber\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint32_to_t_uint32(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // createdBy\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // pollType\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_uint32_to_t_uint32(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // title\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // text\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // startDate\n\n            let memberValue0 := mload(add(value, 0xa0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xa0))\n        }\n\n        {\n            // endDate\n\n            let memberValue0 := mload(add(value, 0xc0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xc0))\n        }\n\n        {\n            // creationDate\n\n            let memberValue0 := mload(add(value, 0xe0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xe0))\n        }\n\n        end := tail\n    }\n\n    function abi_encode_tuple_t_struct$_Poll_$1475_memory_ptr__to_t_struct$_Poll_$1475_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Poll_$1475_memory_ptr_to_t_struct$_Poll_$1475_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function abi_decode_available_length_t_string_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint32t_string_memory_ptrt_string_memory_ptrt_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value2 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 96\n\n            value3 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 128\n\n            value4 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint32_to_t_uint32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function abi_encode_tuple_t_uint32__to_t_uint32__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function increment_t_uint32(value) -> ret {\n        value := cleanup_t_uint32(value)\n        if eq(value, 0xffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint32_t_string_memory_ptr_t_string_memory_ptr_t_uint256_t_uint256__to_t_uint32_t_string_memory_ptr_t_string_memory_ptr_t_uint256_t_uint256__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value0,  add(headStart, 0))\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value1,  tail)\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value4,  add(headStart, 128))\n\n    }\n\n}\n",
+      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint32(value) -> cleaned {\n        cleaned := and(value, 0xffffffff)\n    }\n\n    function validator_revert_t_uint32(value) {\n        if iszero(eq(value, cleanup_t_uint32(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint32(value)\n    }\n\n    function abi_decode_tuple_t_uint32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint32_to_t_uint32(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    // struct STRANDPolls.Poll -> struct STRANDPolls.Poll\n    function abi_encode_t_struct$_Poll_$1503_memory_ptr_to_t_struct$_Poll_$1503_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0x0100)\n\n        {\n            // pollNumber\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint32_to_t_uint32(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // createdBy\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // pollType\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_uint32_to_t_uint32(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // title\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // text\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // startDate\n\n            let memberValue0 := mload(add(value, 0xa0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xa0))\n        }\n\n        {\n            // endDate\n\n            let memberValue0 := mload(add(value, 0xc0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xc0))\n        }\n\n        {\n            // creationDate\n\n            let memberValue0 := mload(add(value, 0xe0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xe0))\n        }\n\n        end := tail\n    }\n\n    function abi_encode_tuple_t_struct$_Poll_$1503_memory_ptr__to_t_struct$_Poll_$1503_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Poll_$1503_memory_ptr_to_t_struct$_Poll_$1503_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function abi_decode_available_length_t_string_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint32t_string_memory_ptrt_string_memory_ptrt_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value2 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 96\n\n            value3 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 128\n\n            value4 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint32_to_t_uint32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function abi_encode_tuple_t_uint32__to_t_uint32__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function increment_t_uint32(value) -> ret {\n        value := cleanup_t_uint32(value)\n        if eq(value, 0xffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint32_t_string_memory_ptr_t_string_memory_ptr_t_uint256_t_uint256__to_t_uint32_t_string_memory_ptr_t_string_memory_ptr_t_uint256_t_uint256__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value0,  add(headStart, 0))\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value1,  tail)\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value4,  add(headStart, 128))\n\n    }\n\n}\n",
       "id": 14,
       "language": "Yul",
       "name": "#utility.yul"
@@ -6444,18 +6444,18 @@
     "absolutePath": "project:/contracts/STRANDProduction/STRANDPolls.sol",
     "exportedSymbols": {
       "STRANDCore": [
-        1049
+        1069
       ],
       "STRANDPolls": [
-        1563
+        1591
       ]
     },
-    "id": 1564,
+    "id": 1592,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1453,
+        "id": 1481,
         "literals": [
           "solidity",
           ">=",
@@ -6471,11 +6471,11 @@
       {
         "absolutePath": "project:/contracts/STRANDProduction/STRANDCore.sol",
         "file": "./STRANDCore.sol",
-        "id": 1454,
+        "id": 1482,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1564,
-        "sourceUnit": 1050,
+        "scope": 1592,
+        "sourceUnit": 1070,
         "src": "68:26:11",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6487,9 +6487,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 1563,
+        "id": 1591,
         "linearizedBaseContracts": [
-          1563
+          1591
         ],
         "name": "STRANDPolls",
         "nameLocation": "107:11:11",
@@ -6497,24 +6497,24 @@
         "nodes": [
           {
             "canonicalName": "STRANDPolls.PollState",
-            "id": 1458,
+            "id": 1486,
             "members": [
               {
-                "id": 1455,
+                "id": 1483,
                 "name": "Planned",
                 "nameLocation": "143:7:11",
                 "nodeType": "EnumValue",
                 "src": "143:7:11"
               },
               {
-                "id": 1456,
+                "id": 1484,
                 "name": "Started",
                 "nameLocation": "152:7:11",
                 "nodeType": "EnumValue",
                 "src": "152:7:11"
               },
               {
-                "id": 1457,
+                "id": 1485,
                 "name": "Finished",
                 "nameLocation": "161:8:11",
                 "nodeType": "EnumValue",
@@ -6528,16 +6528,16 @@
           },
           {
             "canonicalName": "STRANDPolls.Poll",
-            "id": 1475,
+            "id": 1503,
             "members": [
               {
                 "constant": false,
-                "id": 1460,
+                "id": 1488,
                 "mutability": "mutable",
                 "name": "pollNumber",
                 "nameLocation": "207:10:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "200:17:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6546,7 +6546,7 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 1459,
+                  "id": 1487,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
                   "src": "200:6:11",
@@ -6559,12 +6559,12 @@
               },
               {
                 "constant": false,
-                "id": 1462,
+                "id": 1490,
                 "mutability": "mutable",
                 "name": "createdBy",
                 "nameLocation": "236:9:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "228:17:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6573,7 +6573,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1461,
+                  "id": 1489,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "228:7:11",
@@ -6587,12 +6587,12 @@
               },
               {
                 "constant": false,
-                "id": 1464,
+                "id": 1492,
                 "mutability": "mutable",
                 "name": "pollType",
                 "nameLocation": "263:8:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "256:15:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6601,7 +6601,7 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 1463,
+                  "id": 1491,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
                   "src": "256:6:11",
@@ -6614,12 +6614,12 @@
               },
               {
                 "constant": false,
-                "id": 1466,
+                "id": 1494,
                 "mutability": "mutable",
                 "name": "title",
                 "nameLocation": "289:5:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "282:12:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6628,7 +6628,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1465,
+                  "id": 1493,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "282:6:11",
@@ -6641,12 +6641,12 @@
               },
               {
                 "constant": false,
-                "id": 1468,
+                "id": 1496,
                 "mutability": "mutable",
                 "name": "text",
                 "nameLocation": "312:4:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "305:11:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6655,7 +6655,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1467,
+                  "id": 1495,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "305:6:11",
@@ -6668,12 +6668,12 @@
               },
               {
                 "constant": false,
-                "id": 1470,
+                "id": 1498,
                 "mutability": "mutable",
                 "name": "startDate",
                 "nameLocation": "332:9:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "327:14:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6682,7 +6682,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1469,
+                  "id": 1497,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "327:4:11",
@@ -6695,12 +6695,12 @@
               },
               {
                 "constant": false,
-                "id": 1472,
+                "id": 1500,
                 "mutability": "mutable",
                 "name": "endDate",
                 "nameLocation": "357:7:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "352:12:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6709,7 +6709,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1471,
+                  "id": 1499,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "352:4:11",
@@ -6722,12 +6722,12 @@
               },
               {
                 "constant": false,
-                "id": 1474,
+                "id": 1502,
                 "mutability": "mutable",
                 "name": "creationDate",
                 "nameLocation": "380:12:11",
                 "nodeType": "VariableDeclaration",
-                "scope": 1475,
+                "scope": 1503,
                 "src": "375:17:11",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -6736,7 +6736,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1473,
+                  "id": 1501,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "375:4:11",
@@ -6751,29 +6751,29 @@
             "name": "Poll",
             "nameLocation": "184:4:11",
             "nodeType": "StructDefinition",
-            "scope": 1563,
+            "scope": 1591,
             "src": "177:223:11",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 1480,
+            "id": 1508,
             "mutability": "mutable",
             "name": "_polls",
             "nameLocation": "438:6:11",
             "nodeType": "VariableDeclaration",
-            "scope": 1563,
+            "scope": 1591,
             "src": "406:38:11",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1475_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1503_storage_$",
               "typeString": "mapping(uint32 => struct STRANDPolls.Poll)"
             },
             "typeName": {
-              "id": 1479,
+              "id": 1507,
               "keyType": {
-                "id": 1476,
+                "id": 1504,
                 "name": "uint32",
                 "nodeType": "ElementaryTypeName",
                 "src": "414:6:11",
@@ -6785,23 +6785,23 @@
               "nodeType": "Mapping",
               "src": "406:23:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1475_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1503_storage_$",
                 "typeString": "mapping(uint32 => struct STRANDPolls.Poll)"
               },
               "valueType": {
-                "id": 1478,
+                "id": 1506,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 1477,
+                  "id": 1505,
                   "name": "Poll",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1475,
+                  "referencedDeclaration": 1503,
                   "src": "424:4:11"
                 },
-                "referencedDeclaration": 1475,
+                "referencedDeclaration": 1503,
                 "src": "424:4:11",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Poll_$1475_storage_ptr",
+                  "typeIdentifier": "t_struct$_Poll_$1503_storage_ptr",
                   "typeString": "struct STRANDPolls.Poll"
                 }
               }
@@ -6810,12 +6810,12 @@
           },
           {
             "constant": false,
-            "id": 1483,
+            "id": 1511,
             "mutability": "mutable",
             "name": "_pollCounter",
             "nameLocation": "466:12:11",
             "nodeType": "VariableDeclaration",
-            "scope": 1563,
+            "scope": 1591,
             "src": "451:31:11",
             "stateVariable": true,
             "storageLocation": "default",
@@ -6824,7 +6824,7 @@
               "typeString": "uint32"
             },
             "typeName": {
-              "id": 1481,
+              "id": 1509,
               "name": "uint32",
               "nodeType": "ElementaryTypeName",
               "src": "451:6:11",
@@ -6835,7 +6835,7 @@
             },
             "value": {
               "hexValue": "30",
-              "id": 1482,
+              "id": 1510,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -6854,23 +6854,23 @@
           {
             "anonymous": false,
             "eventSelector": "f60c2e3b713d9b2bca14a8400cd049feba15f064ee529af83996ca78acbd6da7",
-            "id": 1497,
+            "id": 1525,
             "name": "NewPoll",
             "nameLocation": "497:7:11",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1496,
+              "id": 1524,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1485,
+                  "id": 1513,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "pollNumber",
                   "nameLocation": "520:10:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1497,
+                  "scope": 1525,
                   "src": "505:25:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6879,7 +6879,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1484,
+                    "id": 1512,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "505:6:11",
@@ -6892,13 +6892,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1487,
+                  "id": 1515,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "pollType",
                   "nameLocation": "539:8:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1497,
+                  "scope": 1525,
                   "src": "532:15:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6907,7 +6907,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1486,
+                    "id": 1514,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "532:6:11",
@@ -6920,13 +6920,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1489,
+                  "id": 1517,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "title",
                   "nameLocation": "556:5:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1497,
+                  "scope": 1525,
                   "src": "549:12:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6935,7 +6935,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1488,
+                    "id": 1516,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "549:6:11",
@@ -6948,13 +6948,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1491,
+                  "id": 1519,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "text",
                   "nameLocation": "570:4:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1497,
+                  "scope": 1525,
                   "src": "563:11:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6963,7 +6963,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1490,
+                    "id": 1518,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "563:6:11",
@@ -6976,13 +6976,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1493,
+                  "id": 1521,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "startDate",
                   "nameLocation": "581:9:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1497,
+                  "scope": 1525,
                   "src": "576:14:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -6991,7 +6991,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1492,
+                    "id": 1520,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "576:4:11",
@@ -7004,13 +7004,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1495,
+                  "id": 1523,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "endDate",
                   "nameLocation": "597:7:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1497,
+                  "scope": 1525,
                   "src": "592:12:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7019,7 +7019,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1494,
+                    "id": 1522,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "592:4:11",
@@ -7037,31 +7037,31 @@
           },
           {
             "body": {
-              "id": 1509,
+              "id": 1537,
               "nodeType": "Block",
               "src": "684:44:11",
               "statements": [
                 {
                   "expression": {
                     "baseExpression": {
-                      "id": 1505,
+                      "id": 1533,
                       "name": "_polls",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1480,
+                      "referencedDeclaration": 1508,
                       "src": "702:6:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1475_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1503_storage_$",
                         "typeString": "mapping(uint32 => struct STRANDPolls.Poll storage ref)"
                       }
                     },
-                    "id": 1507,
+                    "id": 1535,
                     "indexExpression": {
-                      "id": 1506,
+                      "id": 1534,
                       "name": "pollNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1499,
+                      "referencedDeclaration": 1527,
                       "src": "709:10:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -7075,19 +7075,19 @@
                     "nodeType": "IndexAccess",
                     "src": "702:18:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Poll_$1475_storage",
+                      "typeIdentifier": "t_struct$_Poll_$1503_storage",
                       "typeString": "struct STRANDPolls.Poll storage ref"
                     }
                   },
-                  "functionReturnParameters": 1504,
-                  "id": 1508,
+                  "functionReturnParameters": 1532,
+                  "id": 1536,
                   "nodeType": "Return",
                   "src": "695:25:11"
                 }
               ]
             },
             "functionSelector": "17b934a8",
-            "id": 1510,
+            "id": 1538,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -7095,17 +7095,17 @@
             "nameLocation": "623:7:11",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1500,
+              "id": 1528,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1499,
+                  "id": 1527,
                   "mutability": "mutable",
                   "name": "pollNumber",
                   "nameLocation": "638:10:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1510,
+                  "scope": 1538,
                   "src": "631:17:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7114,7 +7114,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1498,
+                    "id": 1526,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "631:6:11",
@@ -7129,38 +7129,38 @@
               "src": "630:19:11"
             },
             "returnParameters": {
-              "id": 1504,
+              "id": 1532,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1503,
+                  "id": 1531,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1510,
+                  "scope": 1538,
                   "src": "671:11:11",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Poll_$1475_memory_ptr",
+                    "typeIdentifier": "t_struct$_Poll_$1503_memory_ptr",
                     "typeString": "struct STRANDPolls.Poll"
                   },
                   "typeName": {
-                    "id": 1502,
+                    "id": 1530,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 1501,
+                      "id": 1529,
                       "name": "Poll",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1475,
+                      "referencedDeclaration": 1503,
                       "src": "671:4:11"
                     },
-                    "referencedDeclaration": 1475,
+                    "referencedDeclaration": 1503,
                     "src": "671:4:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Poll_$1475_storage_ptr",
+                      "typeIdentifier": "t_struct$_Poll_$1503_storage_ptr",
                       "typeString": "struct STRANDPolls.Poll"
                     }
                   },
@@ -7169,7 +7169,7 @@
               ],
               "src": "670:13:11"
             },
-            "scope": 1563,
+            "scope": 1591,
             "src": "614:114:11",
             "stateMutability": "view",
             "virtual": false,
@@ -7177,13 +7177,13 @@
           },
           {
             "body": {
-              "id": 1561,
+              "id": 1589,
               "nodeType": "Block",
               "src": "869:319:11",
               "statements": [
                 {
                   "expression": {
-                    "id": 1526,
+                    "id": 1554,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -7193,11 +7193,11 @@
                     "prefix": false,
                     "src": "880:14:11",
                     "subExpression": {
-                      "id": 1525,
+                      "id": 1553,
                       "name": "_pollCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1483,
+                      "referencedDeclaration": 1511,
                       "src": "880:12:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -7209,23 +7209,23 @@
                       "typeString": "uint32"
                     }
                   },
-                  "id": 1527,
+                  "id": 1555,
                   "nodeType": "ExpressionStatement",
                   "src": "880:14:11"
                 },
                 {
                   "assignments": [
-                    1529
+                    1557
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1529,
+                      "id": 1557,
                       "mutability": "mutable",
                       "name": "pollNumber",
                       "nameLocation": "912:10:11",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1561,
+                      "scope": 1589,
                       "src": "905:17:11",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -7234,7 +7234,7 @@
                         "typeString": "uint32"
                       },
                       "typeName": {
-                        "id": 1528,
+                        "id": 1556,
                         "name": "uint32",
                         "nodeType": "ElementaryTypeName",
                         "src": "905:6:11",
@@ -7246,13 +7246,13 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1531,
+                  "id": 1559,
                   "initialValue": {
-                    "id": 1530,
+                    "id": 1558,
                     "name": "_pollCounter",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1483,
+                    "referencedDeclaration": 1511,
                     "src": "925:12:11",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
@@ -7264,31 +7264,31 @@
                 },
                 {
                   "expression": {
-                    "id": 1548,
+                    "id": 1576,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 1532,
+                        "id": 1560,
                         "name": "_polls",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1480,
+                        "referencedDeclaration": 1508,
                         "src": "948:6:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1475_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Poll_$1503_storage_$",
                           "typeString": "mapping(uint32 => struct STRANDPolls.Poll storage ref)"
                         }
                       },
-                      "id": 1534,
+                      "id": 1562,
                       "indexExpression": {
-                        "id": 1533,
+                        "id": 1561,
                         "name": "pollNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1529,
+                        "referencedDeclaration": 1557,
                         "src": "955:10:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -7302,7 +7302,7 @@
                       "nodeType": "IndexAccess",
                       "src": "948:18:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Poll_$1475_storage",
+                        "typeIdentifier": "t_struct$_Poll_$1503_storage",
                         "typeString": "struct STRANDPolls.Poll storage ref"
                       }
                     },
@@ -7311,11 +7311,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 1536,
+                          "id": 1564,
                           "name": "pollNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1529,
+                          "referencedDeclaration": 1557,
                           "src": "974:10:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -7324,7 +7324,7 @@
                         },
                         {
                           "expression": {
-                            "id": 1537,
+                            "id": 1565,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
@@ -7335,7 +7335,7 @@
                               "typeString": "msg"
                             }
                           },
-                          "id": 1538,
+                          "id": 1566,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -7349,11 +7349,11 @@
                           }
                         },
                         {
-                          "id": 1539,
+                          "id": 1567,
                           "name": "pollType",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1512,
+                          "referencedDeclaration": 1540,
                           "src": "998:8:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -7361,11 +7361,11 @@
                           }
                         },
                         {
-                          "id": 1540,
+                          "id": 1568,
                           "name": "title",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1514,
+                          "referencedDeclaration": 1542,
                           "src": "1008:5:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -7373,11 +7373,11 @@
                           }
                         },
                         {
-                          "id": 1541,
+                          "id": 1569,
                           "name": "text",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1516,
+                          "referencedDeclaration": 1544,
                           "src": "1015:4:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -7385,11 +7385,11 @@
                           }
                         },
                         {
-                          "id": 1542,
+                          "id": 1570,
                           "name": "startDate",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1518,
+                          "referencedDeclaration": 1546,
                           "src": "1021:9:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -7397,11 +7397,11 @@
                           }
                         },
                         {
-                          "id": 1543,
+                          "id": 1571,
                           "name": "endDate",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1520,
+                          "referencedDeclaration": 1548,
                           "src": "1032:7:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -7413,32 +7413,32 @@
                           "expression": {
                             "argumentTypes": [],
                             "expression": {
-                              "id": 1544,
+                              "id": 1572,
                               "name": "STRANDCore",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1049,
+                              "referencedDeclaration": 1069,
                               "src": "1041:10:11",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1049_$",
+                                "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1069_$",
                                 "typeString": "type(library STRANDCore)"
                               }
                             },
-                            "id": 1545,
+                            "id": 1573,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "getCurrentTimestamp",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1048,
+                            "referencedDeclaration": 1068,
                             "src": "1041:30:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_delegatecall_view$__$returns$_t_uint256_$",
                               "typeString": "function () view returns (uint256)"
                             }
                           },
-                          "id": 1546,
+                          "id": 1574,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -7489,18 +7489,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 1535,
+                        "id": 1563,
                         "name": "Poll",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1475,
+                        "referencedDeclaration": 1503,
                         "src": "969:4:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Poll_$1475_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Poll_$1503_storage_ptr_$",
                           "typeString": "type(struct STRANDPolls.Poll storage pointer)"
                         }
                       },
-                      "id": 1547,
+                      "id": 1575,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7511,17 +7511,17 @@
                       "src": "969:105:11",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Poll_$1475_memory_ptr",
+                        "typeIdentifier": "t_struct$_Poll_$1503_memory_ptr",
                         "typeString": "struct STRANDPolls.Poll memory"
                       }
                     },
                     "src": "948:126:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Poll_$1475_storage",
+                      "typeIdentifier": "t_struct$_Poll_$1503_storage",
                       "typeString": "struct STRANDPolls.Poll storage ref"
                     }
                   },
-                  "id": 1549,
+                  "id": 1577,
                   "nodeType": "ExpressionStatement",
                   "src": "948:126:11"
                 },
@@ -7529,11 +7529,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 1551,
+                        "id": 1579,
                         "name": "pollNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1529,
+                        "referencedDeclaration": 1557,
                         "src": "1098:10:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -7541,11 +7541,11 @@
                         }
                       },
                       {
-                        "id": 1552,
+                        "id": 1580,
                         "name": "pollType",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1512,
+                        "referencedDeclaration": 1540,
                         "src": "1110:8:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -7553,11 +7553,11 @@
                         }
                       },
                       {
-                        "id": 1553,
+                        "id": 1581,
                         "name": "title",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1514,
+                        "referencedDeclaration": 1542,
                         "src": "1120:5:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -7565,11 +7565,11 @@
                         }
                       },
                       {
-                        "id": 1554,
+                        "id": 1582,
                         "name": "text",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1516,
+                        "referencedDeclaration": 1544,
                         "src": "1127:4:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -7577,11 +7577,11 @@
                         }
                       },
                       {
-                        "id": 1555,
+                        "id": 1583,
                         "name": "startDate",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1518,
+                        "referencedDeclaration": 1546,
                         "src": "1133:9:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -7589,11 +7589,11 @@
                         }
                       },
                       {
-                        "id": 1556,
+                        "id": 1584,
                         "name": "endDate",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1520,
+                        "referencedDeclaration": 1548,
                         "src": "1144:7:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -7628,18 +7628,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1550,
+                      "id": 1578,
                       "name": "NewPoll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1497,
+                      "referencedDeclaration": 1525,
                       "src": "1090:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint32_$_t_uint32_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint32,uint32,string memory,string memory,uint256,uint256)"
                       }
                     },
-                    "id": 1557,
+                    "id": 1585,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -7654,32 +7654,32 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1558,
+                  "id": 1586,
                   "nodeType": "EmitStatement",
                   "src": "1085:67:11"
                 },
                 {
                   "expression": {
-                    "id": 1559,
+                    "id": 1587,
                     "name": "pollNumber",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1529,
+                    "referencedDeclaration": 1557,
                     "src": "1170:10:11",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
                     }
                   },
-                  "functionReturnParameters": 1524,
-                  "id": 1560,
+                  "functionReturnParameters": 1552,
+                  "id": 1588,
                   "nodeType": "Return",
                   "src": "1163:17:11"
                 }
               ]
             },
             "functionSelector": "a8038e36",
-            "id": 1562,
+            "id": 1590,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -7687,17 +7687,17 @@
             "nameLocation": "743:13:11",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1521,
+              "id": 1549,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1512,
+                  "id": 1540,
                   "mutability": "mutable",
                   "name": "pollType",
                   "nameLocation": "764:8:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1562,
+                  "scope": 1590,
                   "src": "757:15:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7706,7 +7706,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1511,
+                    "id": 1539,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "757:6:11",
@@ -7719,12 +7719,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1514,
+                  "id": 1542,
                   "mutability": "mutable",
                   "name": "title",
                   "nameLocation": "788:5:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1562,
+                  "scope": 1590,
                   "src": "774:19:11",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -7733,7 +7733,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1513,
+                    "id": 1541,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "774:6:11",
@@ -7746,12 +7746,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1516,
+                  "id": 1544,
                   "mutability": "mutable",
                   "name": "text",
                   "nameLocation": "809:4:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1562,
+                  "scope": 1590,
                   "src": "795:18:11",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -7760,7 +7760,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1515,
+                    "id": 1543,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "795:6:11",
@@ -7773,12 +7773,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1518,
+                  "id": 1546,
                   "mutability": "mutable",
                   "name": "startDate",
                   "nameLocation": "820:9:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1562,
+                  "scope": 1590,
                   "src": "815:14:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7787,7 +7787,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1517,
+                    "id": 1545,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "815:4:11",
@@ -7800,12 +7800,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1520,
+                  "id": 1548,
                   "mutability": "mutable",
                   "name": "endDate",
                   "nameLocation": "836:7:11",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1562,
+                  "scope": 1590,
                   "src": "831:12:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7814,7 +7814,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1519,
+                    "id": 1547,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "831:4:11",
@@ -7829,17 +7829,17 @@
               "src": "756:88:11"
             },
             "returnParameters": {
-              "id": 1524,
+              "id": 1552,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1523,
+                  "id": 1551,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1562,
+                  "scope": 1590,
                   "src": "861:6:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7848,7 +7848,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1522,
+                    "id": 1550,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "861:6:11",
@@ -7862,14 +7862,14 @@
               ],
               "src": "860:8:11"
             },
-            "scope": 1563,
+            "scope": 1591,
             "src": "734:454:11",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 1564,
+        "scope": 1592,
         "src": "98:1093:11",
         "usedErrors": []
       }
@@ -7882,7 +7882,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-10T09:45:46.394Z",
+  "updatedAt": "2022-05-11T04:57:49.030Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

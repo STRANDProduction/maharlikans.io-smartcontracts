@@ -4,7 +4,7 @@ pragma solidity >=0.8.0 <0.9.0;
 import "./STRANDPolls.sol";
 import "./STRANDRoles.sol";
 
-contract STRANDGovernmentalToken {
+abstract contract STRANDGovernmentalToken {
     uint32 constant ROLE_OWNER = 1;
     uint32 constant ROLE_ROLE_MANAGEMENT = 2;
     uint32 constant ROLE_ELECTION_COMMITTEE = 3;

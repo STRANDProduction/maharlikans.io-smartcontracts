@@ -3,7 +3,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import "./STRANDCore.sol";
 
-contract STRANDStakeable {
+abstract contract STRANDStakeable {
     /**
     * @notice Constructor since this contract is not ment to be used without inheritance
     * push once to stakeholders for it to work proplerly

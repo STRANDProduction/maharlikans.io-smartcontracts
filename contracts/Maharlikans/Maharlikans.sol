@@ -5,23 +5,31 @@ import "../../@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "../STRANDProduction/STRANDGovernmentalToken.sol";
 import "../STRANDProduction/STRANDStakeable.sol";
 
-contract   Maharlikans is ERC20Burnable, STRANDGovernmentalToken, STRANDStakeable {
+contract Maharlikans is ERC20Burnable, STRANDGovernmentalToken, STRANDStakeable {
 
     uint32 private immutable ROLE_STAKING_COMMITTEE;
 
     constructor() ERC20("Maharlikans", "MHLKS")
-                  STRANDGovernmentalToken(555666777, 18, true, true)
+                  STRANDGovernmentalToken(100000000, 18, true, true)
                   STRANDStakeable() {
         _mint(msg.sender, initialSupply());
         _setStakingReward(1 weeks, 1000);
         ROLE_STAKING_COMMITTEE = getRoles().addRole("ROLE_STAKING_COMMITTEE", "Staking committee");
     }
 
-    function decimals() override public pure returns (uint8) {
-        return 18;
+    function burnable() public view returns (bool) { return CanBurn; }
+    function mintable() public view returns (bool) { return CanMint; }
+
+    // -- ERC20 OVERRIDES -----------------------------------------------------------------------------------------------------------------
+    function decimals() override public view returns (uint8) {
+        return Decimals;
+    }
+    // STRAND: deploy-remove
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal override {
+        ERC20._beforeTokenTransfer(from, to, amount);
     }
 
-    // ----------------------------------- STAKING FUNCTIONS -----------------------------------
+    // -- STAKING FUNCTIONS ---------------------------------------------------------------------------------------------------------------
     modifier roleStakingCommittee {
         require(getRoles().hasRoleAssigned(msg.sender, ROLE_STAKING_COMMITTEE));
         _;

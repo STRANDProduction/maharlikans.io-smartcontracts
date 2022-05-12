@@ -2690,7 +2690,7 @@
                 }
               ]
             },
-            "name": "validator_assert_t_enum$_ApplicationState_$1056",
+            "name": "validator_assert_t_enum$_ApplicationState_$1076",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2733,7 +2733,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "validator_assert_t_enum$_ApplicationState_$1056",
+                      "name": "validator_assert_t_enum$_ApplicationState_$1076",
                       "nodeType": "YulIdentifier",
                       "src": "4750:47:14"
                     },
@@ -2745,7 +2745,7 @@
                 }
               ]
             },
-            "name": "cleanup_t_enum$_ApplicationState_$1056",
+            "name": "cleanup_t_enum$_ApplicationState_$1076",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2782,7 +2782,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "cleanup_t_enum$_ApplicationState_$1056",
+                      "name": "cleanup_t_enum$_ApplicationState_$1076",
                       "nodeType": "YulIdentifier",
                       "src": "4918:38:14"
                     },
@@ -2799,7 +2799,7 @@
                 }
               ]
             },
-            "name": "convert_t_enum$_ApplicationState_$1056_to_t_uint8",
+            "name": "convert_t_enum$_ApplicationState_$1076_to_t_uint8",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2841,7 +2841,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "convert_t_enum$_ApplicationState_$1056_to_t_uint8",
+                          "name": "convert_t_enum$_ApplicationState_$1076_to_t_uint8",
                           "nodeType": "YulIdentifier",
                           "src": "5071:49:14"
                         },
@@ -2862,7 +2862,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_enum$_ApplicationState_$1056_to_t_uint8",
+            "name": "abi_encode_t_enum$_ApplicationState_$1076_to_t_uint8",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -3821,7 +3821,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_encode_t_enum$_ApplicationState_$1056_to_t_uint8",
+                          "name": "abi_encode_t_enum$_ApplicationState_$1076_to_t_uint8",
                           "nodeType": "YulIdentifier",
                           "src": "7020:52:14"
                         },
@@ -4041,7 +4041,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_struct$_Application_$1077_memory_ptr_to_t_struct$_Application_$1077_memory_ptr_fromStack",
+            "name": "abi_encode_t_struct$_Application_$1097_memory_ptr_to_t_struct$_Application_$1097_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -4182,7 +4182,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_struct$_Application_$1077_memory_ptr_to_t_struct$_Application_$1077_memory_ptr_fromStack",
+                      "name": "abi_encode_t_struct$_Application_$1097_memory_ptr_to_t_struct$_Application_$1097_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "7791:101:14"
                     },
@@ -4199,7 +4199,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_struct$_Application_$1077_memory_ptr__to_t_struct$_Application_$1077_memory_ptr__fromStack_reversed",
+            "name": "abi_encode_tuple_t_struct$_Application_$1097_memory_ptr__to_t_struct$_Application_$1097_memory_ptr__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -9337,7 +9337,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint32(value) -> cleaned {\n        cleaned := and(value, 0xffffffff)\n    }\n\n    function validator_revert_t_uint32(value) {\n        if iszero(eq(value, cleanup_t_uint32(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint32(value)\n    }\n\n    function abi_decode_tuple_t_uint32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_uint32_to_t_uint32(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function array_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_string_memory_ptr_$dyn_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_dataslot_t_array$_t_string_memory_ptr_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function abi_encodeUpdatedPos_t_string_memory_ptr_to_t_string_memory_ptr(value0, pos) -> updatedPos {\n        updatedPos := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value0, pos)\n    }\n\n    function array_nextElement_t_array$_t_string_memory_ptr_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    // string[] -> string[]\n    function abi_encode_t_array$_t_string_memory_ptr_$dyn_memory_ptr_to_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value, pos)  -> end  {\n        let length := array_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_string_memory_ptr_$dyn_memory_ptr(pos, length)\n        let headStart := pos\n        let tail := add(pos, mul(length, 0x20))\n        let baseRef := array_dataslot_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, sub(tail, headStart))\n            let elementValue0 := mload(srcPtr)\n            tail := abi_encodeUpdatedPos_t_string_memory_ptr_to_t_string_memory_ptr(elementValue0, tail)\n            srcPtr := array_nextElement_t_array$_t_string_memory_ptr_$dyn_memory_ptr(srcPtr)\n            pos := add(pos, 0x20)\n        }\n        pos := tail\n        end := pos\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function validator_assert_t_enum$_ApplicationState_$1056(value) {\n        if iszero(lt(value, 3)) { panic_error_0x21() }\n    }\n\n    function cleanup_t_enum$_ApplicationState_$1056(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_ApplicationState_$1056(value)\n    }\n\n    function convert_t_enum$_ApplicationState_$1056_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_ApplicationState_$1056(value)\n    }\n\n    function abi_encode_t_enum$_ApplicationState_$1056_to_t_uint8(value, pos) {\n        mstore(pos, convert_t_enum$_ApplicationState_$1056_to_t_uint8(value))\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    // struct STRANDElections.Application -> struct STRANDElections.Application\n    function abi_encode_t_struct$_Application_$1077_memory_ptr_to_t_struct$_Application_$1077_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0x0120)\n\n        {\n            // submittedBy\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // nominee\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // forRole\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_uint32_to_t_uint32(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // title\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // text\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // contactAddresses\n\n            let memberValue0 := mload(add(value, 0xa0))\n\n            mstore(add(pos, 0xa0), sub(tail, pos))\n            tail := abi_encode_t_array$_t_string_memory_ptr_$dyn_memory_ptr_to_t_array$_t_string_memory_ptr_$dyn_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // state\n\n            let memberValue0 := mload(add(value, 0xc0))\n            abi_encode_t_enum$_ApplicationState_$1056_to_t_uint8(memberValue0, add(pos, 0xc0))\n        }\n\n        {\n            // submissionTimestamp\n\n            let memberValue0 := mload(add(value, 0xe0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xe0))\n        }\n\n        {\n            // decisionTimestamp\n\n            let memberValue0 := mload(add(value, 0x0100))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x0100))\n        }\n\n        end := tail\n    }\n\n    function abi_encode_tuple_t_struct$_Application_$1077_memory_ptr__to_t_struct$_Application_$1077_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Application_$1077_memory_ptr_to_t_struct$_Application_$1077_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function abi_decode_available_length_t_string_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function array_allocation_size_t_array$_t_string_memory_ptr_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {\n        revert(0, 0)\n    }\n\n    // string[]\n    function abi_decode_available_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_string_memory_ptr_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let srcEnd := add(offset, mul(length, 0x20))\n        if gt(srcEnd, end) {\n            revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef()\n        }\n        for { let src := offset } lt(src, srcEnd) { src := add(src, 0x20) }\n        {\n\n            let innerOffset := calldataload(src)\n            if gt(innerOffset, 0xffffffffffffffff) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n            let elementPos := add(offset, innerOffset)\n\n            mstore(dst, abi_decode_t_string_memory_ptr(elementPos, end))\n            dst := add(dst, 0x20)\n        }\n    }\n\n    // string[]\n    function abi_decode_t_array$_t_string_memory_ptr_$dyn_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_tuple_t_addresst_uint32t_string_memory_ptrt_string_memory_ptrt_array$_t_string_memory_ptr_$dyn_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value2 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value3 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 128))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value4 := abi_decode_t_array$_t_string_memory_ptr_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint32_to_t_uint32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function abi_encode_tuple_t_uint32__to_t_uint32__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_decode_tuple_t_uint32t_string_memory_ptr(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function increment_t_uint32(value) -> ret {\n        value := cleanup_t_uint32(value)\n        if eq(value, 0xffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_address_t_uint32_t_string_memory_ptr_t_string_memory_ptr__to_t_address_t_uint32_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart , value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 128)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value1,  add(headStart, 32))\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n        mstore(add(headStart, 96), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value3,  tail)\n\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n}\n",
+      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint32(value) -> cleaned {\n        cleaned := and(value, 0xffffffff)\n    }\n\n    function validator_revert_t_uint32(value) {\n        if iszero(eq(value, cleanup_t_uint32(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint32(value)\n    }\n\n    function abi_decode_tuple_t_uint32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_uint32_to_t_uint32(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function array_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_string_memory_ptr_$dyn_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_dataslot_t_array$_t_string_memory_ptr_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function abi_encodeUpdatedPos_t_string_memory_ptr_to_t_string_memory_ptr(value0, pos) -> updatedPos {\n        updatedPos := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value0, pos)\n    }\n\n    function array_nextElement_t_array$_t_string_memory_ptr_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    // string[] -> string[]\n    function abi_encode_t_array$_t_string_memory_ptr_$dyn_memory_ptr_to_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value, pos)  -> end  {\n        let length := array_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_string_memory_ptr_$dyn_memory_ptr(pos, length)\n        let headStart := pos\n        let tail := add(pos, mul(length, 0x20))\n        let baseRef := array_dataslot_t_array$_t_string_memory_ptr_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, sub(tail, headStart))\n            let elementValue0 := mload(srcPtr)\n            tail := abi_encodeUpdatedPos_t_string_memory_ptr_to_t_string_memory_ptr(elementValue0, tail)\n            srcPtr := array_nextElement_t_array$_t_string_memory_ptr_$dyn_memory_ptr(srcPtr)\n            pos := add(pos, 0x20)\n        }\n        pos := tail\n        end := pos\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function validator_assert_t_enum$_ApplicationState_$1076(value) {\n        if iszero(lt(value, 3)) { panic_error_0x21() }\n    }\n\n    function cleanup_t_enum$_ApplicationState_$1076(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_ApplicationState_$1076(value)\n    }\n\n    function convert_t_enum$_ApplicationState_$1076_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_ApplicationState_$1076(value)\n    }\n\n    function abi_encode_t_enum$_ApplicationState_$1076_to_t_uint8(value, pos) {\n        mstore(pos, convert_t_enum$_ApplicationState_$1076_to_t_uint8(value))\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    // struct STRANDElections.Application -> struct STRANDElections.Application\n    function abi_encode_t_struct$_Application_$1097_memory_ptr_to_t_struct$_Application_$1097_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0x0120)\n\n        {\n            // submittedBy\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // nominee\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // forRole\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_uint32_to_t_uint32(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // title\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // text\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // contactAddresses\n\n            let memberValue0 := mload(add(value, 0xa0))\n\n            mstore(add(pos, 0xa0), sub(tail, pos))\n            tail := abi_encode_t_array$_t_string_memory_ptr_$dyn_memory_ptr_to_t_array$_t_string_memory_ptr_$dyn_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // state\n\n            let memberValue0 := mload(add(value, 0xc0))\n            abi_encode_t_enum$_ApplicationState_$1076_to_t_uint8(memberValue0, add(pos, 0xc0))\n        }\n\n        {\n            // submissionTimestamp\n\n            let memberValue0 := mload(add(value, 0xe0))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0xe0))\n        }\n\n        {\n            // decisionTimestamp\n\n            let memberValue0 := mload(add(value, 0x0100))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x0100))\n        }\n\n        end := tail\n    }\n\n    function abi_encode_tuple_t_struct$_Application_$1097_memory_ptr__to_t_struct$_Application_$1097_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Application_$1097_memory_ptr_to_t_struct$_Application_$1097_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function abi_decode_available_length_t_string_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function array_allocation_size_t_array$_t_string_memory_ptr_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {\n        revert(0, 0)\n    }\n\n    // string[]\n    function abi_decode_available_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_string_memory_ptr_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let srcEnd := add(offset, mul(length, 0x20))\n        if gt(srcEnd, end) {\n            revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef()\n        }\n        for { let src := offset } lt(src, srcEnd) { src := add(src, 0x20) }\n        {\n\n            let innerOffset := calldataload(src)\n            if gt(innerOffset, 0xffffffffffffffff) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n            let elementPos := add(offset, innerOffset)\n\n            mstore(dst, abi_decode_t_string_memory_ptr(elementPos, end))\n            dst := add(dst, 0x20)\n        }\n    }\n\n    // string[]\n    function abi_decode_t_array$_t_string_memory_ptr_$dyn_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_array$_t_string_memory_ptr_$dyn_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_tuple_t_addresst_uint32t_string_memory_ptrt_string_memory_ptrt_array$_t_string_memory_ptr_$dyn_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value2 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value3 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 128))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value4 := abi_decode_t_array$_t_string_memory_ptr_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint32_to_t_uint32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint32(value))\n    }\n\n    function abi_encode_tuple_t_uint32__to_t_uint32__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_decode_tuple_t_uint32t_string_memory_ptr(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function increment_t_uint32(value) -> ret {\n        value := cleanup_t_uint32(value)\n        if eq(value, 0xffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_tuple_t_address_t_uint32_t_string_memory_ptr_t_string_memory_ptr__to_t_address_t_uint32_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart , value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 128)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint32_to_t_uint32_fromStack(value1,  add(headStart, 32))\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n        mstore(add(headStart, 96), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value3,  tail)\n\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n}\n",
       "id": 14,
       "language": "Yul",
       "name": "#utility.yul"
@@ -9351,18 +9351,18 @@
     "absolutePath": "project:/contracts/STRANDProduction/STRANDElections.sol",
     "exportedSymbols": {
       "STRANDCore": [
-        1049
+        1069
       ],
       "STRANDElections": [
-        1232
+        1252
       ]
     },
-    "id": 1233,
+    "id": 1253,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1051,
+        "id": 1071,
         "literals": [
           "solidity",
           ">=",
@@ -9378,11 +9378,11 @@
       {
         "absolutePath": "project:/contracts/STRANDProduction/STRANDCore.sol",
         "file": "./STRANDCore.sol",
-        "id": 1052,
+        "id": 1072,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1233,
-        "sourceUnit": 1050,
+        "scope": 1253,
+        "sourceUnit": 1070,
         "src": "68:26:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9394,9 +9394,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 1232,
+        "id": 1252,
         "linearizedBaseContracts": [
-          1232
+          1252
         ],
         "name": "STRANDElections",
         "nameLocation": "107:15:9",
@@ -9404,24 +9404,24 @@
         "nodes": [
           {
             "canonicalName": "STRANDElections.ApplicationState",
-            "id": 1056,
+            "id": 1076,
             "members": [
               {
-                "id": 1053,
+                "id": 1073,
                 "name": "InProgress",
                 "nameLocation": "154:10:9",
                 "nodeType": "EnumValue",
                 "src": "154:10:9"
               },
               {
-                "id": 1054,
+                "id": 1074,
                 "name": "Refused",
                 "nameLocation": "166:7:9",
                 "nodeType": "EnumValue",
                 "src": "166:7:9"
               },
               {
-                "id": 1055,
+                "id": 1075,
                 "name": "Accepted",
                 "nameLocation": "175:8:9",
                 "nodeType": "EnumValue",
@@ -9435,16 +9435,16 @@
           },
           {
             "canonicalName": "STRANDElections.Application",
-            "id": 1077,
+            "id": 1097,
             "members": [
               {
                 "constant": false,
-                "id": 1058,
+                "id": 1078,
                 "mutability": "mutable",
                 "name": "submittedBy",
                 "nameLocation": "229:11:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "221:19:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9453,7 +9453,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1057,
+                  "id": 1077,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "221:7:9",
@@ -9467,12 +9467,12 @@
               },
               {
                 "constant": false,
-                "id": 1060,
+                "id": 1080,
                 "mutability": "mutable",
                 "name": "nominee",
                 "nameLocation": "259:7:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "251:15:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9481,7 +9481,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1059,
+                  "id": 1079,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "251:7:9",
@@ -9495,12 +9495,12 @@
               },
               {
                 "constant": false,
-                "id": 1062,
+                "id": 1082,
                 "mutability": "mutable",
                 "name": "forRole",
                 "nameLocation": "284:7:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "277:14:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9509,7 +9509,7 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 1061,
+                  "id": 1081,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
                   "src": "277:6:9",
@@ -9522,12 +9522,12 @@
               },
               {
                 "constant": false,
-                "id": 1064,
+                "id": 1084,
                 "mutability": "mutable",
                 "name": "title",
                 "nameLocation": "309:5:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "302:12:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9536,7 +9536,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1063,
+                  "id": 1083,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "302:6:9",
@@ -9549,12 +9549,12 @@
               },
               {
                 "constant": false,
-                "id": 1066,
+                "id": 1086,
                 "mutability": "mutable",
                 "name": "text",
                 "nameLocation": "332:4:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "325:11:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9563,7 +9563,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1065,
+                  "id": 1085,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "325:6:9",
@@ -9576,12 +9576,12 @@
               },
               {
                 "constant": false,
-                "id": 1069,
+                "id": 1089,
                 "mutability": "mutable",
                 "name": "contactAddresses",
                 "nameLocation": "356:16:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "347:25:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9591,7 +9591,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1067,
+                    "id": 1087,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "347:6:9",
@@ -9600,7 +9600,7 @@
                       "typeString": "string"
                     }
                   },
-                  "id": 1068,
+                  "id": 1088,
                   "nodeType": "ArrayTypeName",
                   "src": "347:8:9",
                   "typeDescriptions": {
@@ -9612,33 +9612,33 @@
               },
               {
                 "constant": false,
-                "id": 1072,
+                "id": 1092,
                 "mutability": "mutable",
                 "name": "state",
                 "nameLocation": "400:5:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "383:22:9",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                  "typeIdentifier": "t_enum$_ApplicationState_$1076",
                   "typeString": "enum STRANDElections.ApplicationState"
                 },
                 "typeName": {
-                  "id": 1071,
+                  "id": 1091,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 1070,
+                    "id": 1090,
                     "name": "ApplicationState",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 1056,
+                    "referencedDeclaration": 1076,
                     "src": "383:16:9"
                   },
-                  "referencedDeclaration": 1056,
+                  "referencedDeclaration": 1076,
                   "src": "383:16:9",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                    "typeIdentifier": "t_enum$_ApplicationState_$1076",
                     "typeString": "enum STRANDElections.ApplicationState"
                   }
                 },
@@ -9646,12 +9646,12 @@
               },
               {
                 "constant": false,
-                "id": 1074,
+                "id": 1094,
                 "mutability": "mutable",
                 "name": "submissionTimestamp",
                 "nameLocation": "421:19:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "416:24:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9660,7 +9660,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1073,
+                  "id": 1093,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "416:4:9",
@@ -9673,12 +9673,12 @@
               },
               {
                 "constant": false,
-                "id": 1076,
+                "id": 1096,
                 "mutability": "mutable",
                 "name": "decisionTimestamp",
                 "nameLocation": "456:17:9",
                 "nodeType": "VariableDeclaration",
-                "scope": 1077,
+                "scope": 1097,
                 "src": "451:22:9",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9687,7 +9687,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1075,
+                  "id": 1095,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "451:4:9",
@@ -9702,29 +9702,29 @@
             "name": "Application",
             "nameLocation": "198:11:9",
             "nodeType": "StructDefinition",
-            "scope": 1232,
+            "scope": 1252,
             "src": "191:290:9",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 1082,
+            "id": 1102,
             "mutability": "mutable",
             "name": "_applications",
             "nameLocation": "526:13:9",
             "nodeType": "VariableDeclaration",
-            "scope": 1232,
+            "scope": 1252,
             "src": "487:52:9",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
               "typeString": "mapping(uint32 => struct STRANDElections.Application)"
             },
             "typeName": {
-              "id": 1081,
+              "id": 1101,
               "keyType": {
-                "id": 1078,
+                "id": 1098,
                 "name": "uint32",
                 "nodeType": "ElementaryTypeName",
                 "src": "495:6:9",
@@ -9736,23 +9736,23 @@
               "nodeType": "Mapping",
               "src": "487:30:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                 "typeString": "mapping(uint32 => struct STRANDElections.Application)"
               },
               "valueType": {
-                "id": 1080,
+                "id": 1100,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 1079,
+                  "id": 1099,
                   "name": "Application",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1077,
+                  "referencedDeclaration": 1097,
                   "src": "505:11:9"
                 },
-                "referencedDeclaration": 1077,
+                "referencedDeclaration": 1097,
                 "src": "505:11:9",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Application_$1077_storage_ptr",
+                  "typeIdentifier": "t_struct$_Application_$1097_storage_ptr",
                   "typeString": "struct STRANDElections.Application"
                 }
               }
@@ -9761,12 +9761,12 @@
           },
           {
             "constant": false,
-            "id": 1085,
+            "id": 1105,
             "mutability": "mutable",
             "name": "_applicationsCounter",
             "nameLocation": "553:20:9",
             "nodeType": "VariableDeclaration",
-            "scope": 1232,
+            "scope": 1252,
             "src": "546:31:9",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9775,7 +9775,7 @@
               "typeString": "uint32"
             },
             "typeName": {
-              "id": 1083,
+              "id": 1103,
               "name": "uint32",
               "nodeType": "ElementaryTypeName",
               "src": "546:6:9",
@@ -9786,7 +9786,7 @@
             },
             "value": {
               "hexValue": "30",
-              "id": 1084,
+              "id": 1104,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -9805,23 +9805,23 @@
           {
             "anonymous": false,
             "eventSelector": "7c04b6898a91b9a37334ebb1f6a25e976e36a024acd96086ec748261177cdd04",
-            "id": 1097,
+            "id": 1117,
             "name": "NewApplication",
             "nameLocation": "592:14:9",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1096,
+              "id": 1116,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1087,
+                  "id": 1107,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "applicationNumber",
                   "nameLocation": "622:17:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1097,
+                  "scope": 1117,
                   "src": "607:32:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9830,7 +9830,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1086,
+                    "id": 1106,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "607:6:9",
@@ -9843,13 +9843,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1089,
+                  "id": 1109,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "user",
                   "nameLocation": "649:4:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1097,
+                  "scope": 1117,
                   "src": "641:12:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9858,7 +9858,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1088,
+                    "id": 1108,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "641:7:9",
@@ -9872,13 +9872,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1091,
+                  "id": 1111,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "role",
                   "nameLocation": "662:4:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1097,
+                  "scope": 1117,
                   "src": "655:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9887,7 +9887,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1090,
+                    "id": 1110,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "655:6:9",
@@ -9900,13 +9900,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1093,
+                  "id": 1113,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "title",
                   "nameLocation": "675:5:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1097,
+                  "scope": 1117,
                   "src": "668:12:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9915,7 +9915,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1092,
+                    "id": 1112,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "668:6:9",
@@ -9928,13 +9928,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1095,
+                  "id": 1115,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "text",
                   "nameLocation": "689:4:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1097,
+                  "scope": 1117,
                   "src": "682:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9943,7 +9943,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1094,
+                    "id": 1114,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "682:6:9",
@@ -9962,23 +9962,23 @@
           {
             "anonymous": false,
             "eventSelector": "4c348e02993731a3c7755cb6e1b2ce2fdfc472423082d97e3dddca9e0bc42b80",
-            "id": 1103,
+            "id": 1123,
             "name": "ApplicationRefused",
             "nameLocation": "707:18:9",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1102,
+              "id": 1122,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1099,
+                  "id": 1119,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "applicationNumber",
                   "nameLocation": "741:17:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1103,
+                  "scope": 1123,
                   "src": "726:32:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9987,7 +9987,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1098,
+                    "id": 1118,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "726:6:9",
@@ -10000,13 +10000,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1101,
+                  "id": 1121,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "reason",
                   "nameLocation": "767:6:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1103,
+                  "scope": 1123,
                   "src": "760:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10015,7 +10015,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1100,
+                    "id": 1120,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "760:6:9",
@@ -10034,23 +10034,23 @@
           {
             "anonymous": false,
             "eventSelector": "d5800a28adcc400c413d414fbadebb49aa289b8aaa5db1e690dd23d17ff398e2",
-            "id": 1107,
+            "id": 1127,
             "name": "ApplicationAccepted",
             "nameLocation": "787:19:9",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1106,
+              "id": 1126,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1105,
+                  "id": 1125,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "applicationNumber",
                   "nameLocation": "822:17:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1107,
+                  "scope": 1127,
                   "src": "807:32:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10059,7 +10059,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1104,
+                    "id": 1124,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "807:6:9",
@@ -10077,31 +10077,31 @@
           },
           {
             "body": {
-              "id": 1119,
+              "id": 1139,
               "nodeType": "Block",
               "src": "940:58:9",
               "statements": [
                 {
                   "expression": {
                     "baseExpression": {
-                      "id": 1115,
+                      "id": 1135,
                       "name": "_applications",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1082,
+                      "referencedDeclaration": 1102,
                       "src": "958:13:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                         "typeString": "mapping(uint32 => struct STRANDElections.Application storage ref)"
                       }
                     },
-                    "id": 1117,
+                    "id": 1137,
                     "indexExpression": {
-                      "id": 1116,
+                      "id": 1136,
                       "name": "applicationNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1109,
+                      "referencedDeclaration": 1129,
                       "src": "972:17:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -10115,19 +10115,19 @@
                     "nodeType": "IndexAccess",
                     "src": "958:32:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Application_$1077_storage",
+                      "typeIdentifier": "t_struct$_Application_$1097_storage",
                       "typeString": "struct STRANDElections.Application storage ref"
                     }
                   },
-                  "functionReturnParameters": 1114,
-                  "id": 1118,
+                  "functionReturnParameters": 1134,
+                  "id": 1138,
                   "nodeType": "Return",
                   "src": "951:39:9"
                 }
               ]
             },
             "functionSelector": "23a67788",
-            "id": 1120,
+            "id": 1140,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -10135,17 +10135,17 @@
             "nameLocation": "858:14:9",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1110,
+              "id": 1130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1109,
+                  "id": 1129,
                   "mutability": "mutable",
                   "name": "applicationNumber",
                   "nameLocation": "880:17:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1120,
+                  "scope": 1140,
                   "src": "873:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10154,7 +10154,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1108,
+                    "id": 1128,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "873:6:9",
@@ -10169,38 +10169,38 @@
               "src": "872:26:9"
             },
             "returnParameters": {
-              "id": 1114,
+              "id": 1134,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1133,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1120,
+                  "scope": 1140,
                   "src": "920:18:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Application_$1077_memory_ptr",
+                    "typeIdentifier": "t_struct$_Application_$1097_memory_ptr",
                     "typeString": "struct STRANDElections.Application"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1132,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 1111,
+                      "id": 1131,
                       "name": "Application",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1077,
+                      "referencedDeclaration": 1097,
                       "src": "920:11:9"
                     },
-                    "referencedDeclaration": 1077,
+                    "referencedDeclaration": 1097,
                     "src": "920:11:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Application_$1077_storage_ptr",
+                      "typeIdentifier": "t_struct$_Application_$1097_storage_ptr",
                       "typeString": "struct STRANDElections.Application"
                     }
                   },
@@ -10209,7 +10209,7 @@
               ],
               "src": "919:20:9"
             },
-            "scope": 1232,
+            "scope": 1252,
             "src": "849:149:9",
             "stateMutability": "view",
             "virtual": false,
@@ -10217,13 +10217,13 @@
           },
           {
             "body": {
-              "id": 1173,
+              "id": 1193,
               "nodeType": "Block",
               "src": "1157:386:9",
               "statements": [
                 {
                   "expression": {
-                    "id": 1137,
+                    "id": 1157,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10233,11 +10233,11 @@
                     "prefix": false,
                     "src": "1168:22:9",
                     "subExpression": {
-                      "id": 1136,
+                      "id": 1156,
                       "name": "_applicationsCounter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1085,
+                      "referencedDeclaration": 1105,
                       "src": "1168:20:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -10249,23 +10249,23 @@
                       "typeString": "uint32"
                     }
                   },
-                  "id": 1138,
+                  "id": 1158,
                   "nodeType": "ExpressionStatement",
                   "src": "1168:22:9"
                 },
                 {
                   "assignments": [
-                    1140
+                    1160
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1140,
+                      "id": 1160,
                       "mutability": "mutable",
                       "name": "applicationNumber",
                       "nameLocation": "1208:17:9",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1173,
+                      "scope": 1193,
                       "src": "1201:24:9",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -10274,7 +10274,7 @@
                         "typeString": "uint32"
                       },
                       "typeName": {
-                        "id": 1139,
+                        "id": 1159,
                         "name": "uint32",
                         "nodeType": "ElementaryTypeName",
                         "src": "1201:6:9",
@@ -10286,13 +10286,13 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1142,
+                  "id": 1162,
                   "initialValue": {
-                    "id": 1141,
+                    "id": 1161,
                     "name": "_applicationsCounter",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1085,
+                    "referencedDeclaration": 1105,
                     "src": "1228:20:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
@@ -10304,31 +10304,31 @@
                 },
                 {
                   "expression": {
-                    "id": 1161,
+                    "id": 1181,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 1143,
+                        "id": 1163,
                         "name": "_applications",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1082,
+                        "referencedDeclaration": 1102,
                         "src": "1259:13:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                           "typeString": "mapping(uint32 => struct STRANDElections.Application storage ref)"
                         }
                       },
-                      "id": 1145,
+                      "id": 1165,
                       "indexExpression": {
-                        "id": 1144,
+                        "id": 1164,
                         "name": "applicationNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1140,
+                        "referencedDeclaration": 1160,
                         "src": "1273:17:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -10342,7 +10342,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1259:32:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Application_$1077_storage",
+                        "typeIdentifier": "t_struct$_Application_$1097_storage",
                         "typeString": "struct STRANDElections.Application storage ref"
                       }
                     },
@@ -10352,7 +10352,7 @@
                       "arguments": [
                         {
                           "expression": {
-                            "id": 1147,
+                            "id": 1167,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
@@ -10363,7 +10363,7 @@
                               "typeString": "msg"
                             }
                           },
-                          "id": 1148,
+                          "id": 1168,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -10377,11 +10377,11 @@
                           }
                         },
                         {
-                          "id": 1149,
+                          "id": 1169,
                           "name": "user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1122,
+                          "referencedDeclaration": 1142,
                           "src": "1318:4:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -10389,11 +10389,11 @@
                           }
                         },
                         {
-                          "id": 1150,
+                          "id": 1170,
                           "name": "role",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1124,
+                          "referencedDeclaration": 1144,
                           "src": "1324:4:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -10401,11 +10401,11 @@
                           }
                         },
                         {
-                          "id": 1151,
+                          "id": 1171,
                           "name": "title",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1126,
+                          "referencedDeclaration": 1146,
                           "src": "1330:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -10413,11 +10413,11 @@
                           }
                         },
                         {
-                          "id": 1152,
+                          "id": 1172,
                           "name": "text",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1128,
+                          "referencedDeclaration": 1148,
                           "src": "1337:4:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -10425,11 +10425,11 @@
                           }
                         },
                         {
-                          "id": 1153,
+                          "id": 1173,
                           "name": "contactAddresses",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1131,
+                          "referencedDeclaration": 1151,
                           "src": "1343:16:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
@@ -10438,28 +10438,28 @@
                         },
                         {
                           "expression": {
-                            "id": 1154,
+                            "id": 1174,
                             "name": "ApplicationState",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1056,
+                            "referencedDeclaration": 1076,
                             "src": "1361:16:9",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_enum$_ApplicationState_$1056_$",
+                              "typeIdentifier": "t_type$_t_enum$_ApplicationState_$1076_$",
                               "typeString": "type(enum STRANDElections.ApplicationState)"
                             }
                           },
-                          "id": 1155,
+                          "id": 1175,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "memberName": "InProgress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1053,
+                          "referencedDeclaration": 1073,
                           "src": "1361:27:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                            "typeIdentifier": "t_enum$_ApplicationState_$1076",
                             "typeString": "enum STRANDElections.ApplicationState"
                           }
                         },
@@ -10468,32 +10468,32 @@
                           "expression": {
                             "argumentTypes": [],
                             "expression": {
-                              "id": 1156,
+                              "id": 1176,
                               "name": "STRANDCore",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1049,
+                              "referencedDeclaration": 1069,
                               "src": "1390:10:9",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1049_$",
+                                "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1069_$",
                                 "typeString": "type(library STRANDCore)"
                               }
                             },
-                            "id": 1157,
+                            "id": 1177,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "getCurrentTimestamp",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1048,
+                            "referencedDeclaration": 1068,
                             "src": "1390:30:9",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_delegatecall_view$__$returns$_t_uint256_$",
                               "typeString": "function () view returns (uint256)"
                             }
                           },
-                          "id": 1158,
+                          "id": 1178,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -10510,7 +10510,7 @@
                         },
                         {
                           "hexValue": "30",
-                          "id": 1159,
+                          "id": 1179,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -10552,7 +10552,7 @@
                             "typeString": "string memory[] memory"
                           },
                           {
-                            "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                            "typeIdentifier": "t_enum$_ApplicationState_$1076",
                             "typeString": "enum STRANDElections.ApplicationState"
                           },
                           {
@@ -10564,18 +10564,18 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 1146,
+                        "id": 1166,
                         "name": "Application",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1077,
+                        "referencedDeclaration": 1097,
                         "src": "1294:11:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Application_$1077_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Application_$1097_storage_ptr_$",
                           "typeString": "type(struct STRANDElections.Application storage pointer)"
                         }
                       },
-                      "id": 1160,
+                      "id": 1180,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -10586,17 +10586,17 @@
                       "src": "1294:132:9",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Application_$1077_memory_ptr",
+                        "typeIdentifier": "t_struct$_Application_$1097_memory_ptr",
                         "typeString": "struct STRANDElections.Application memory"
                       }
                     },
                     "src": "1259:167:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Application_$1077_storage",
+                      "typeIdentifier": "t_struct$_Application_$1097_storage",
                       "typeString": "struct STRANDElections.Application storage ref"
                     }
                   },
-                  "id": 1162,
+                  "id": 1182,
                   "nodeType": "ExpressionStatement",
                   "src": "1259:167:9"
                 },
@@ -10604,11 +10604,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 1164,
+                        "id": 1184,
                         "name": "applicationNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1140,
+                        "referencedDeclaration": 1160,
                         "src": "1457:17:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -10616,11 +10616,11 @@
                         }
                       },
                       {
-                        "id": 1165,
+                        "id": 1185,
                         "name": "user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1122,
+                        "referencedDeclaration": 1142,
                         "src": "1476:4:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10628,11 +10628,11 @@
                         }
                       },
                       {
-                        "id": 1166,
+                        "id": 1186,
                         "name": "role",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1124,
+                        "referencedDeclaration": 1144,
                         "src": "1482:4:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -10640,11 +10640,11 @@
                         }
                       },
                       {
-                        "id": 1167,
+                        "id": 1187,
                         "name": "title",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1126,
+                        "referencedDeclaration": 1146,
                         "src": "1488:5:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -10652,11 +10652,11 @@
                         }
                       },
                       {
-                        "id": 1168,
+                        "id": 1188,
                         "name": "text",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1128,
+                        "referencedDeclaration": 1148,
                         "src": "1495:4:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -10687,18 +10687,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1163,
+                      "id": 1183,
                       "name": "NewApplication",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1097,
+                      "referencedDeclaration": 1117,
                       "src": "1442:14:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint32_$_t_address_$_t_uint32_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint32,address,uint32,string memory,string memory)"
                       }
                     },
-                    "id": 1169,
+                    "id": 1189,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10713,32 +10713,32 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1170,
+                  "id": 1190,
                   "nodeType": "EmitStatement",
                   "src": "1437:63:9"
                 },
                 {
                   "expression": {
-                    "id": 1171,
+                    "id": 1191,
                     "name": "applicationNumber",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1140,
+                    "referencedDeclaration": 1160,
                     "src": "1518:17:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
                     }
                   },
-                  "functionReturnParameters": 1135,
-                  "id": 1172,
+                  "functionReturnParameters": 1155,
+                  "id": 1192,
                   "nodeType": "Return",
                   "src": "1511:24:9"
                 }
               ]
             },
             "functionSelector": "594089f3",
-            "id": 1174,
+            "id": 1194,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -10746,17 +10746,17 @@
             "nameLocation": "1013:17:9",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1132,
+              "id": 1152,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1122,
+                  "id": 1142,
                   "mutability": "mutable",
                   "name": "user",
                   "nameLocation": "1039:4:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1174,
+                  "scope": 1194,
                   "src": "1031:12:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10765,7 +10765,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1121,
+                    "id": 1141,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1031:7:9",
@@ -10779,12 +10779,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1124,
+                  "id": 1144,
                   "mutability": "mutable",
                   "name": "role",
                   "nameLocation": "1052:4:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1174,
+                  "scope": 1194,
                   "src": "1045:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10793,7 +10793,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1123,
+                    "id": 1143,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1045:6:9",
@@ -10806,12 +10806,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1126,
+                  "id": 1146,
                   "mutability": "mutable",
                   "name": "title",
                   "nameLocation": "1072:5:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1174,
+                  "scope": 1194,
                   "src": "1058:19:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -10820,7 +10820,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1125,
+                    "id": 1145,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1058:6:9",
@@ -10833,12 +10833,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1128,
+                  "id": 1148,
                   "mutability": "mutable",
                   "name": "text",
                   "nameLocation": "1093:4:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1174,
+                  "scope": 1194,
                   "src": "1079:18:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -10847,7 +10847,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1127,
+                    "id": 1147,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1079:6:9",
@@ -10860,12 +10860,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1131,
+                  "id": 1151,
                   "mutability": "mutable",
                   "name": "contactAddresses",
                   "nameLocation": "1115:16:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1174,
+                  "scope": 1194,
                   "src": "1099:32:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -10875,7 +10875,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1129,
+                      "id": 1149,
                       "name": "string",
                       "nodeType": "ElementaryTypeName",
                       "src": "1099:6:9",
@@ -10884,7 +10884,7 @@
                         "typeString": "string"
                       }
                     },
-                    "id": 1130,
+                    "id": 1150,
                     "nodeType": "ArrayTypeName",
                     "src": "1099:8:9",
                     "typeDescriptions": {
@@ -10898,17 +10898,17 @@
               "src": "1030:102:9"
             },
             "returnParameters": {
-              "id": 1135,
+              "id": 1155,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1134,
+                  "id": 1154,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1174,
+                  "scope": 1194,
                   "src": "1149:6:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10917,7 +10917,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1133,
+                    "id": 1153,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1149:6:9",
@@ -10931,7 +10931,7 @@
               ],
               "src": "1148:8:9"
             },
-            "scope": 1232,
+            "scope": 1252,
             "src": "1004:539:9",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -10939,13 +10939,13 @@
           },
           {
             "body": {
-              "id": 1203,
+              "id": 1223,
               "nodeType": "Block",
               "src": "1631:241:9",
               "statements": [
                 {
                   "expression": {
-                    "id": 1187,
+                    "id": 1207,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10953,24 +10953,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 1181,
+                          "id": 1201,
                           "name": "_applications",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1082,
+                          "referencedDeclaration": 1102,
                           "src": "1642:13:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                             "typeString": "mapping(uint32 => struct STRANDElections.Application storage ref)"
                           }
                         },
-                        "id": 1183,
+                        "id": 1203,
                         "indexExpression": {
-                          "id": 1182,
+                          "id": 1202,
                           "name": "applicationNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1176,
+                          "referencedDeclaration": 1196,
                           "src": "1656:17:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -10984,21 +10984,21 @@
                         "nodeType": "IndexAccess",
                         "src": "1642:32:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Application_$1077_storage",
+                          "typeIdentifier": "t_struct$_Application_$1097_storage",
                           "typeString": "struct STRANDElections.Application storage ref"
                         }
                       },
-                      "id": 1184,
+                      "id": 1204,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "state",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1072,
+                      "referencedDeclaration": 1092,
                       "src": "1642:38:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                        "typeIdentifier": "t_enum$_ApplicationState_$1076",
                         "typeString": "enum STRANDElections.ApplicationState"
                       }
                     },
@@ -11006,44 +11006,44 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 1185,
+                        "id": 1205,
                         "name": "ApplicationState",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1056,
+                        "referencedDeclaration": 1076,
                         "src": "1683:16:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_ApplicationState_$1056_$",
+                          "typeIdentifier": "t_type$_t_enum$_ApplicationState_$1076_$",
                           "typeString": "type(enum STRANDElections.ApplicationState)"
                         }
                       },
-                      "id": 1186,
+                      "id": 1206,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "memberName": "Refused",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1054,
+                      "referencedDeclaration": 1074,
                       "src": "1683:24:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                        "typeIdentifier": "t_enum$_ApplicationState_$1076",
                         "typeString": "enum STRANDElections.ApplicationState"
                       }
                     },
                     "src": "1642:65:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                      "typeIdentifier": "t_enum$_ApplicationState_$1076",
                       "typeString": "enum STRANDElections.ApplicationState"
                     }
                   },
-                  "id": 1188,
+                  "id": 1208,
                   "nodeType": "ExpressionStatement",
                   "src": "1642:65:9"
                 },
                 {
                   "expression": {
-                    "id": 1196,
+                    "id": 1216,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11051,24 +11051,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 1189,
+                          "id": 1209,
                           "name": "_applications",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1082,
+                          "referencedDeclaration": 1102,
                           "src": "1718:13:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                             "typeString": "mapping(uint32 => struct STRANDElections.Application storage ref)"
                           }
                         },
-                        "id": 1191,
+                        "id": 1211,
                         "indexExpression": {
-                          "id": 1190,
+                          "id": 1210,
                           "name": "applicationNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1176,
+                          "referencedDeclaration": 1196,
                           "src": "1732:17:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -11082,18 +11082,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1718:32:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Application_$1077_storage",
+                          "typeIdentifier": "t_struct$_Application_$1097_storage",
                           "typeString": "struct STRANDElections.Application storage ref"
                         }
                       },
-                      "id": 1192,
+                      "id": 1212,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "decisionTimestamp",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1076,
+                      "referencedDeclaration": 1096,
                       "src": "1718:50:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -11107,32 +11107,32 @@
                       "expression": {
                         "argumentTypes": [],
                         "expression": {
-                          "id": 1193,
+                          "id": 1213,
                           "name": "STRANDCore",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1049,
+                          "referencedDeclaration": 1069,
                           "src": "1771:10:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1049_$",
+                            "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1069_$",
                             "typeString": "type(library STRANDCore)"
                           }
                         },
-                        "id": 1194,
+                        "id": 1214,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "getCurrentTimestamp",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1048,
+                        "referencedDeclaration": 1068,
                         "src": "1771:30:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_delegatecall_view$__$returns$_t_uint256_$",
                           "typeString": "function () view returns (uint256)"
                         }
                       },
-                      "id": 1195,
+                      "id": 1215,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -11153,7 +11153,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1197,
+                  "id": 1217,
                   "nodeType": "ExpressionStatement",
                   "src": "1718:85:9"
                 },
@@ -11161,11 +11161,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 1199,
+                        "id": 1219,
                         "name": "applicationNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1176,
+                        "referencedDeclaration": 1196,
                         "src": "1838:17:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -11173,11 +11173,11 @@
                         }
                       },
                       {
-                        "id": 1200,
+                        "id": 1220,
                         "name": "reason",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1178,
+                        "referencedDeclaration": 1198,
                         "src": "1857:6:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -11196,18 +11196,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1198,
+                      "id": 1218,
                       "name": "ApplicationRefused",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1103,
+                      "referencedDeclaration": 1123,
                       "src": "1819:18:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint32_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint32,string memory)"
                       }
                     },
-                    "id": 1201,
+                    "id": 1221,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11222,14 +11222,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1202,
+                  "id": 1222,
                   "nodeType": "EmitStatement",
                   "src": "1814:50:9"
                 }
               ]
             },
             "functionSelector": "9aefca8e",
-            "id": 1204,
+            "id": 1224,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -11237,17 +11237,17 @@
             "nameLocation": "1558:17:9",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1179,
+              "id": 1199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1176,
+                  "id": 1196,
                   "mutability": "mutable",
                   "name": "applicationNumber",
                   "nameLocation": "1583:17:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1204,
+                  "scope": 1224,
                   "src": "1576:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -11256,7 +11256,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1175,
+                    "id": 1195,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1576:6:9",
@@ -11269,12 +11269,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1178,
+                  "id": 1198,
                   "mutability": "mutable",
                   "name": "reason",
                   "nameLocation": "1616:6:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1204,
+                  "scope": 1224,
                   "src": "1602:20:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -11283,7 +11283,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1177,
+                    "id": 1197,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1602:6:9",
@@ -11298,12 +11298,12 @@
               "src": "1575:48:9"
             },
             "returnParameters": {
-              "id": 1180,
+              "id": 1200,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1631:0:9"
             },
-            "scope": 1232,
+            "scope": 1252,
             "src": "1549:323:9",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -11311,13 +11311,13 @@
           },
           {
             "body": {
-              "id": 1230,
+              "id": 1250,
               "nodeType": "Block",
               "src": "1938:235:9",
               "statements": [
                 {
                   "expression": {
-                    "id": 1215,
+                    "id": 1235,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11325,24 +11325,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 1209,
+                          "id": 1229,
                           "name": "_applications",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1082,
+                          "referencedDeclaration": 1102,
                           "src": "1949:13:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                             "typeString": "mapping(uint32 => struct STRANDElections.Application storage ref)"
                           }
                         },
-                        "id": 1211,
+                        "id": 1231,
                         "indexExpression": {
-                          "id": 1210,
+                          "id": 1230,
                           "name": "applicationNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1206,
+                          "referencedDeclaration": 1226,
                           "src": "1963:17:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -11356,21 +11356,21 @@
                         "nodeType": "IndexAccess",
                         "src": "1949:32:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Application_$1077_storage",
+                          "typeIdentifier": "t_struct$_Application_$1097_storage",
                           "typeString": "struct STRANDElections.Application storage ref"
                         }
                       },
-                      "id": 1212,
+                      "id": 1232,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "state",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1072,
+                      "referencedDeclaration": 1092,
                       "src": "1949:38:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                        "typeIdentifier": "t_enum$_ApplicationState_$1076",
                         "typeString": "enum STRANDElections.ApplicationState"
                       }
                     },
@@ -11378,44 +11378,44 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 1213,
+                        "id": 1233,
                         "name": "ApplicationState",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1056,
+                        "referencedDeclaration": 1076,
                         "src": "1990:16:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_ApplicationState_$1056_$",
+                          "typeIdentifier": "t_type$_t_enum$_ApplicationState_$1076_$",
                           "typeString": "type(enum STRANDElections.ApplicationState)"
                         }
                       },
-                      "id": 1214,
+                      "id": 1234,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "memberName": "Accepted",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1055,
+                      "referencedDeclaration": 1075,
                       "src": "1990:25:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                        "typeIdentifier": "t_enum$_ApplicationState_$1076",
                         "typeString": "enum STRANDElections.ApplicationState"
                       }
                     },
                     "src": "1949:66:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ApplicationState_$1056",
+                      "typeIdentifier": "t_enum$_ApplicationState_$1076",
                       "typeString": "enum STRANDElections.ApplicationState"
                     }
                   },
-                  "id": 1216,
+                  "id": 1236,
                   "nodeType": "ExpressionStatement",
                   "src": "1949:66:9"
                 },
                 {
                   "expression": {
-                    "id": 1224,
+                    "id": 1244,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11423,24 +11423,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 1217,
+                          "id": 1237,
                           "name": "_applications",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1082,
+                          "referencedDeclaration": 1102,
                           "src": "2026:13:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1077_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint32_$_t_struct$_Application_$1097_storage_$",
                             "typeString": "mapping(uint32 => struct STRANDElections.Application storage ref)"
                           }
                         },
-                        "id": 1219,
+                        "id": 1239,
                         "indexExpression": {
-                          "id": 1218,
+                          "id": 1238,
                           "name": "applicationNumber",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1206,
+                          "referencedDeclaration": 1226,
                           "src": "2040:17:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint32",
@@ -11454,18 +11454,18 @@
                         "nodeType": "IndexAccess",
                         "src": "2026:32:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Application_$1077_storage",
+                          "typeIdentifier": "t_struct$_Application_$1097_storage",
                           "typeString": "struct STRANDElections.Application storage ref"
                         }
                       },
-                      "id": 1220,
+                      "id": 1240,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "decisionTimestamp",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1076,
+                      "referencedDeclaration": 1096,
                       "src": "2026:50:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -11479,32 +11479,32 @@
                       "expression": {
                         "argumentTypes": [],
                         "expression": {
-                          "id": 1221,
+                          "id": 1241,
                           "name": "STRANDCore",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1049,
+                          "referencedDeclaration": 1069,
                           "src": "2079:10:9",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1049_$",
+                            "typeIdentifier": "t_type$_t_contract$_STRANDCore_$1069_$",
                             "typeString": "type(library STRANDCore)"
                           }
                         },
-                        "id": 1222,
+                        "id": 1242,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "getCurrentTimestamp",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1048,
+                        "referencedDeclaration": 1068,
                         "src": "2079:30:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_delegatecall_view$__$returns$_t_uint256_$",
                           "typeString": "function () view returns (uint256)"
                         }
                       },
-                      "id": 1223,
+                      "id": 1243,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -11525,7 +11525,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1225,
+                  "id": 1245,
                   "nodeType": "ExpressionStatement",
                   "src": "2026:85:9"
                 },
@@ -11533,11 +11533,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 1227,
+                        "id": 1247,
                         "name": "applicationNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1206,
+                        "referencedDeclaration": 1226,
                         "src": "2147:17:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint32",
@@ -11552,18 +11552,18 @@
                           "typeString": "uint32"
                         }
                       ],
-                      "id": 1226,
+                      "id": 1246,
                       "name": "ApplicationAccepted",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1107,
+                      "referencedDeclaration": 1127,
                       "src": "2127:19:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint32_$returns$__$",
                         "typeString": "function (uint32)"
                       }
                     },
-                    "id": 1228,
+                    "id": 1248,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11578,14 +11578,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1229,
+                  "id": 1249,
                   "nodeType": "EmitStatement",
                   "src": "2122:43:9"
                 }
               ]
             },
             "functionSelector": "f969cdcb",
-            "id": 1231,
+            "id": 1251,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -11593,17 +11593,17 @@
             "nameLocation": "1887:17:9",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1207,
+              "id": 1227,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1206,
+                  "id": 1226,
                   "mutability": "mutable",
                   "name": "applicationNumber",
                   "nameLocation": "1912:17:9",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1231,
+                  "scope": 1251,
                   "src": "1905:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -11612,7 +11612,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 1205,
+                    "id": 1225,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1905:6:9",
@@ -11627,19 +11627,19 @@
               "src": "1904:26:9"
             },
             "returnParameters": {
-              "id": 1208,
+              "id": 1228,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1938:0:9"
             },
-            "scope": 1232,
+            "scope": 1252,
             "src": "1878:295:9",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 1233,
+        "scope": 1253,
         "src": "98:2078:9",
         "usedErrors": []
       }
@@ -11652,7 +11652,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-10T09:45:46.321Z",
+  "updatedAt": "2022-05-11T04:57:48.973Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
